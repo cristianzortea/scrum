@@ -1,0 +1,12 @@
+<div class="column-container">
+    <h2>{{column}}</h2>
+    <h2>To Do</h2>
+    <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="column-stories"
+        cdkDropListSortingDisabled
+        (cdkDropListDropped)="drop($event)">
+            <div class="story" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+</div>

@@ -13,12 +13,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { BoardComponent } from './board/board.component';
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import { ColumnComponent } from './column/column.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
+    ColumnComponent,
     
   ],
   imports: [

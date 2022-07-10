@@ -1,55 +1,5 @@
 <div cdkDropListGroup>
-  <div class="column-container">
-    <h2>Backlog</h2>
-    <div
-      cdkDropList
-      [cdkDropListData]="backlog"
-      class="column-stories"
-      cdkDropListSortingDisabled
-      (cdkDropListDropped)="drop($event)">
-        <div class="story" *ngFor="let item of backlog" cdkDrag>{{item}}</div>
-      </div>
-  </div>
-
-  <div class="column-container">
-    <h2>To Do</h2>
-    <div
-      cdkDropList
-      [cdkDropListData]="todo"
-      class="column-stories"
-      cdkDropListSortingDisabled
-      (cdkDropListDropped)="drop($event)">
-        <div class="story" *ngFor="let item of todo" cdkDrag>{{item}}</div>
-      </div>
-  </div>
+  <app-column *ngFor="let column of columns" column="{{column}}" ></app-column>
   
-  <div class="column-container">
-    <h2>Doing</h2>
-    <div
-      cdkDropList
-      [cdkDropListData]="doing"
-      class="column-stories"
-      (cdkDropListDropped)="drop($event)">
-        <div class="story" *ngFor="let item of doing" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-     
-  <div class="column-container">
-    <h2>Done</h2>
-    <div
-      cdkDropList
-      [cdkDropListData]="done"
-      class="column-stories"
-      (cdkDropListDropped)="drop($event)">
-        <div class="story" *ngFor="let item of done" cdkDrag>
-          <div class="story-title">
-            {{item}}
-          </div>
-          <div class="story-description">
-            skddfhshdsakdksa dasdsj da j  djasdjasdjasj
-          </div>
-        </div>
-      </div>
-  </div>
 
 </div>
