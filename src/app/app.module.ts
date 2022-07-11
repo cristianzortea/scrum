@@ -14,6 +14,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { BoardComponent } from './board/board.component';
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { ColumnComponent } from './column/column.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ColumnComponent } from './column/column.component';
     AppComponent,
     BoardComponent,
     ColumnComponent,
+    HeaderComponent,
     
   ],
   imports: [

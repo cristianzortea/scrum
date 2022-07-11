@@ -1,5 +1,4 @@
 <div cdkDropListGroup>
-  <app-column *ngFor="let column of columns" column="{{column}}" ></app-column>
-  
-
+  <app-column *ngFor="let column of columns" [column]=column >
+  </app-column>
 </div>
