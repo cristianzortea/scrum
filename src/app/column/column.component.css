@@ -5,10 +5,10 @@
     display: inline-block;
     vertical-align: top;
     background-color: red;
+    padding: 20px;
   }
   
   .column-stories {
-    border: solid 1px #ccc;
     min-height: 60px;
     background: white;
     border-radius: 4px;
@@ -17,17 +17,20 @@
   }
   
   .story {
-    padding: 20px 10px;
-    border-bottom: solid 1px #ccc;
+    padding: 10px 10px;
     color: rgba(0, 0, 0, 0.87);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
     cursor: move;
     background: white;
     font-size: 12px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    margin: 20px;
   }
   
   .story-title{
