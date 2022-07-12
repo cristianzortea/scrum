@@ -1,3 +1,8 @@
+.mat-toolbar{
+  background: rgba(31, 121, 31, 0.3);
+  border-top: 3mm solid rgba(126, 174, 126, 0.934);
+  border-bottom: 1px solid rgba(115, 248, 115, 0.934);
+}
 .example-spacer {
     flex: 1 1 auto;
-  }
+} 

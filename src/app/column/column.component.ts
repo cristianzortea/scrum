@@ -10,7 +10,7 @@ import { Story } from '../story';
 })
 
 export class ColumnComponent implements OnInit {
-  @Input() column: Column = {id: 0, name: 'Windstorm',color:'', stories:[]};
+  @Input() column: Column = {id: 0, name: 'Windstorm', stories:[]};
 
   stories = this.column.stories;
 

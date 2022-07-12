@@ -18,7 +18,6 @@ export class BoardComponent implements OnInit {
     {
       id: 1,
       name: 'Backlog',
-      color:'red', 
       stories : [ {
         id: 1, 
         name: 'Get to work', 
@@ -36,9 +35,9 @@ export class BoardComponent implements OnInit {
         name:'Fall asleep', 
         description:' sjdff  fsfkskfksf  dfd fd  fkkkepwor[owl;olkk  j'
       }]},
-    {id: 2, name: 'To Do', color:'red', stories : [ {id: 10, name: 'Get to work', description:''}, {id:21, name:'Pick up groceries', description:''},{id:31, name:'Go home', description:''},{id:35, name:'Fall asleep', description:''}]},
-    {id: 3, name: 'Doing', color:'red', stories : [ {id: 11, name: 'Get to work', description:''}, {id:22, name:'Pick up groceries', description:''},{id:32, name:'Go home', description:''},{id:36, name:'Fall asleep', description:''}]},
-    {id: 4, name: 'Done', color:'red', stories : [ {id: 12, name: 'Get to work', description:''}, {id:23, name:'Pick up groceries', description:''},{id:33, name:'Go home', description:''},{id:37, name:'Fall asleep', description:''}]}
+    {id: 2, name: 'To Do',  stories : [ {id: 10, name: 'Get to work', description:''}, {id:21, name:'Pick up groceries', description:''},{id:31, name:'Go home', description:''},{id:35, name:'Fall asleep', description:''}]},
+    {id: 3, name: 'Doing',  stories : [ {id: 11, name: 'Get to work', description:''}, {id:22, name:'Pick up groceries', description:''},{id:32, name:'Go home', description:''},{id:36, name:'Fall asleep', description:''}]},
+    {id: 4, name: 'Done',  stories : [ {id: 12, name: 'Get to work', description:''}, {id:23, name:'Pick up groceries', description:''},{id:33, name:'Go home', description:''},{id:37, name:'Fall asleep', description:''}]}
   ]
   
   constructor() {
