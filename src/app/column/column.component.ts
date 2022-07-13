@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Inject } from '@angular/core';
 import {CdkDragDrop,CdkDragEnter, CdkDragExit ,  moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { Column } from '../column';
 import { Story } from '../story';
+import { BoardService } from '../board.service';
+
 
 @Component({
   selector: 'app-column',
@@ -10,16 +12,17 @@ import { Story } from '../story';
 })
 
 export class ColumnComponent implements OnInit {
-  @Input() column: Column = {id: 0, name: 'Windstorm', stories:[]};
+  @Input() key: number | undefined;
+  column: Column = {id:0, name:'', stories:[]};
+  stories: Story[] | undefined;
+  columns: Column[] = [];
 
-  stories = this.column.stories;
-
-  constructor() { }
+  constructor(private boardService: BoardService) { }
 
   ngOnInit(): void {
-
+    this.getColumns();
   }
-
+  
   drop(event: CdkDragDrop<Story[]>) {
     console.log(event);
     if (event.previousContainer === event.container) {
@@ -28,15 +31,21 @@ export class ColumnComponent implements OnInit {
     } else {
       console.log("not equals");
       console.log(event.previousContainer.data.toString);
-
       console.log(event.previousContainer.data);
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
         event.currentIndex,
-      );
+        );
+      }
     }
-  }
+    getColumns(): void {
+      this.boardService.getColumns().subscribe((list: Column[])=> {
+        this.columns = list;
+      });
+    }
+
 
 }
+
