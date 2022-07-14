@@ -15,27 +15,13 @@ import { BoardService } from '../board.service';
 
 export class BoardComponent implements OnInit {
 
-  columns: Column[] = [];
   keys: number[] = []
 
   constructor(private boardService: BoardService) {
   }
 
   ngOnInit(): void {
-    this.getColumns();
-    this.getkeys();
-  }
-
-  getkeys(): void{
-    for(var index in this.columns){
-        this.keys.push(this.columns[index].id);
-    }
-  }
-
-  getColumns(): void {
-    this.boardService.getColumns().subscribe((list: Column[])=> {
-      this.columns = list;
-    });
+    this.keys = this.boardService.getkeys();
   }
 
 }

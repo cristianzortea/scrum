@@ -20,10 +20,11 @@ export class ColumnComponent implements OnInit {
   constructor(private boardService: BoardService) { }
 
   ngOnInit(): void {
-    this.getColumns();
+    this.columns = this.boardService.getColumns();
   }
   
-  drop(event: CdkDragDrop<Story[]>) {
+
+  drop(event: CdkDragDrop<number[]>) {
     console.log(event);
     if (event.previousContainer === event.container) {
       console.log("equals");
@@ -37,15 +38,9 @@ export class ColumnComponent implements OnInit {
         event.container.data,
         event.previousIndex,
         event.currentIndex,
-        );
-      }
+      );
     }
-    getColumns(): void {
-      this.boardService.getColumns().subscribe((list: Column[])=> {
-        this.columns = list;
-      });
-    }
-
+  }
 
 }
 
