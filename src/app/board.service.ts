@@ -54,6 +54,19 @@ export class BoardService {
     }); 
     return item;
   }
+
+  getStoryById(id: number): Column {
+    let story : Story = {};
+    this.columns.forEach(function (column) {
+      column.stories?.forEach(function (item) {
+        if (id == item.id){
+          story = item;
+        }
+      }); 
+    }); 
+    return story;
+  }
+
   getkeys(): number[] {
     let keys: number[] = [];
     for(let index of this.columns) {

@@ -1,23 +1,14 @@
 
 <div class="column-container">
-    <h2>{{column.name}}</h2>
+    <h2>{{column.name}}-{{column.id}}</h2>
     <div
         cdkDropList
-        [cdkDropListData]="stories"
+        [cdkDropListData]="keys"
         class="column-stories"
         cdkDropListSortingDisabled
         (cdkDropListDropped)="drop($event)">
-            <div class="story" *ngFor="let story of column.stories" cdkDrag>
-                <h3>{{story.name}}</h3>
-                <p>{{story.description}}</p>
-                <div>
-                    <button routerLink="/board/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                        <mat-icon>edit_calendar</mat-icon>
-                    </button>
-                    <button routerLink="/board/" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </div>
+            <div class="story" *ngFor="let story_id of keys" cdkDrag>
+                <app-story [story_id]=story_id></app-story>
             </div>
     </div>
 </div>

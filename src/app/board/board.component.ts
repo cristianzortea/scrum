@@ -1,7 +1,7 @@
 import {Component, OnInit } from '@angular/core';
 import {CdkDragDrop,CdkDragEnter, CdkDragExit ,  moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { Column } from '../column';
-import { Story } from '../story';
+
 import { BoardService } from '../board.service';
 
 /**
@@ -15,13 +15,13 @@ import { BoardService } from '../board.service';
 
 export class BoardComponent implements OnInit {
 
-  keys: number[] = []
+  columns: Column[] = [{}];
 
   constructor(private boardService: BoardService) {
   }
 
   ngOnInit(): void {
-    this.keys = this.boardService.getkeys();
+    this.columns = this.boardService.getColumns();
   }
 
 }

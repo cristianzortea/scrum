@@ -12,27 +12,24 @@ import { BoardService } from '../board.service';
 })
 
 export class ColumnComponent implements OnInit {
-  @Input() key: number | undefined;
-  column: Column = {id:0, name:'', stories:[]};
-  stories: Story[] | undefined;
-  columns: Column[] = [];
+  @Input() column: Column = {stories:[]};
+  keys: number[] = [];
 
   constructor(private boardService: BoardService) { }
 
   ngOnInit(): void {
-    this.columns = this.boardService.getColumns();
+    if (this.column != undefined){
+      var list: Column[] = this.column.stories!;
+      for(let index of list) {
+        this.keys.push(index.id!);
+      }
+    }
   }
   
-
   drop(event: CdkDragDrop<number[]>) {
-    console.log(event);
     if (event.previousContainer === event.container) {
-      console.log("equals");
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      console.log("not equals");
-      console.log(event.previousContainer.data.toString);
-      console.log(event.previousContainer.data);
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,

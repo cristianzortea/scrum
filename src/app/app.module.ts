@@ -15,6 +15,7 @@ import { BoardComponent } from './board/board.component';
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { ColumnComponent } from './column/column.component';
 import { HeaderComponent } from './header/header.component';
+import { StoryComponent } from './story/story.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
     BoardComponent,
     ColumnComponent,
     HeaderComponent,
+    StoryComponent,
     
   ],
   imports: [
