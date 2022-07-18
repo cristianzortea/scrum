@@ -30,6 +30,9 @@ export class ColumnComponent implements OnInit {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
+      var column: Column = this.boardService.getColumnById(Number(event.container.id));
+      console.log(column.name); 
+      console.log("Need to implement save here!"); 
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,

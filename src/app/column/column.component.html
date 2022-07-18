@@ -1,11 +1,12 @@
 
 <div class="column-container">
-    <h2>{{column.name}}-{{column.id}}</h2>
+    <h2>{{column.name}}</h2>
     <div
         cdkDropList
         [cdkDropListData]="keys"
         class="column-stories"
         cdkDropListSortingDisabled
+        id = {{column.id}}
         (cdkDropListDropped)="drop($event)">
             <div class="story" *ngFor="let story_id of keys" cdkDrag>
                 <app-story [story_id]=story_id></app-story>

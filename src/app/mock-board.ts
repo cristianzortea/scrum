@@ -22,7 +22,8 @@ export const columns: Column[] = [
         name:'Fall asleep', 
         description:' sjdff  fsfkskfksf  dfd fd  fkkkepwor[owl;olkk  j'
       }]},
-    {id: 2, name: 'To Do',  stories : [ {id: 10, name: 'Get to work', description:''}, {id:21, name:'Pick up groceries', description:''},{id:31, name:'Go home', description:''},{id:35, name:'Fall asleep', description:''}]},
+    {
+        id: 2, name: 'To Do',  stories : [ {id: 10, name: 'Get to work', description:''}, {id:21, name:'Pick up groceries', description:''},{id:31, name:'Go home', description:''},{id:35, name:'Fall asleep', description:''}]},
     {id: 3, name: 'Doing',  stories : [ {id: 11, name: 'Get to work', description:''}, {id:22, name:'Pick up groceries', description:''},{id:32, name:'Go home', description:''},{id:36, name:'Fall asleep', description:''}]},
     {id: 4, name: 'Done',  stories : [ {id: 12, name: 'Get to work', description:''}, {id:23, name:'Pick up groceries', description:''},{id:33, name:'Go home', description:''},{id:37, name:'Fall asleep', description:''}]}
   ]
