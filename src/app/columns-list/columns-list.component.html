@@ -1,1 +1,9 @@
-<p>columns-list works!</p>
+
+<div class="container">
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of list" cdkDrag>
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+            {{item}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+
+
+.mat-dialog-container{
+    min-height: 60px;
+    box-sizing:border-box;
+    background: rgb(0 100 0 / 0.1) !important;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+}
+
+.story-name{
+    border: none;
+    border-bottom:1px solid #ccc;
+    width:100%;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    font-size: large;
+    color: black;
+}

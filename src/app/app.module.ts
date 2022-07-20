@@ -17,7 +17,10 @@ import { ColumnComponent } from './column/column.component';
 import { HeaderComponent } from './header/header.component';
 import { StoryComponent } from './story/story.component';
 import { ColumnsListComponent } from './columns-list/columns-list.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,13 @@ import { ColumnsListComponent } from './columns-list/columns-list.component';
     MatIconModule,
     MatDividerModule,
     MatCardModule,
-    DragDropModule
+    DragDropModule,
+    MatDialogModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

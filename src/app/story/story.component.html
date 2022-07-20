@@ -1,7 +1,7 @@
 <h3>{{story.name}}</h3>
 <p>{{story.description}}</p>
 <div>
-    <button routerLink="/board/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button (click)="openDialog()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>edit_calendar</mat-icon>
     </button>
     <button routerLink="/board/" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
