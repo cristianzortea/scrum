@@ -1,10 +1,12 @@
-<h3>{{story.name}}</h3>
-<p>{{story.description}}</p>
-<div>
-    <button (click)="openDialog()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>edit_calendar</mat-icon>
-    </button>
-    <button routerLink="/board/" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>delete</mat-icon>
-    </button>
+<div *ngIf="story">
+    <h3>{{story.name}}</h3>
+    <p>{{story.description}}</p>
+    <div>
+        <button (click)="openDialog()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>edit_calendar</mat-icon>
+        </button>
+        <button routerLink="/board/" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
 </div>

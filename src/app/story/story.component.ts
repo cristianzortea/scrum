@@ -18,8 +18,10 @@ export class StoryComponent implements OnInit {
   @ViewChild('menuTrigger')
   menuTrigger!: MatMenuTrigger;
 
-  @Input() story_id: number | undefined;
-  @Input() story: Story = {};
+  @Input() 
+  story_id: number | undefined;
+  @Input()
+  story: Story ={};
 
   
   constructor(private boardService: BoardService, public dialog: MatDialog) {
@@ -49,7 +51,8 @@ export class StoryComponent implements OnInit {
 })
 
 export class StoryDetailDialog {
-  @Input() story: Story = {};
+  @Input() story: Story = {name:"ttt"};
+
   constructor(
     public dialogRef: MatDialogRef<StoryDetailDialog>,
     @Inject(MAT_DIALOG_DATA) public data: Story,

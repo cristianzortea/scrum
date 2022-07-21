@@ -1,11 +1,13 @@
-<h1>
-  <input class="story-name" [(ngModel)]="story.name" id="story-name" placeholder="Name">
-</h1>
-<div mat-dialog-content>
-  <div><span>id: </span>{{data.id}}</div>
-</div>
-<div mat-dialog-actions> 
-  <button mat-button mat-dialog-close>Okay</button>
-</div>
+
+  <h1>
+    <input class="story-name" [value]="story.name" id="story-name" placeholder="Name">
+  </h1>
+  <div mat-dialog-content>
+    <div><span>id: </span>{{data.id}}</div>
+  </div>
+  <div mat-dialog-actions> 
+    <button mat-button mat-dialog-close>Okay</button>
+  </div>
+
 
 
