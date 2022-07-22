@@ -68,6 +68,16 @@ export class BoardService {
     return story;
   }
 
+  updateStory(story: Story): void {
+    this.columns.forEach(function (column) {
+      column.stories?.forEach(function (item) {
+        if (story.id == item.id){
+          item = story;
+        }
+      }); 
+    }); 
+  } 
+
   getkeys(): number[] {
     let keys: number[] = [];
     for(let index of this.columns) {
